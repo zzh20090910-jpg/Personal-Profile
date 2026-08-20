@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hower Zheng | Personal Portfolio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #172033;
+      background: #f6f8fc;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    nav h2 {
+      color: #2457d6;
+    }
+
+    nav a {
+      margin-left: 24px;
+      color: #374151;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #2457d6;
+    }
+
+    header {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      padding: 80px 10%;
+      background: linear-gradient(135deg, #eef4ff, #ffffff);
+    }
+
+    header h1 {
+      font-size: 56px;
+      margin-bottom: 16px;
+    }
+
+    header h1 span {
+      color: #2457d6;
+    }
+
+    header p {
+      max-width: 680px;
+      font-size: 20px;
+      color: #5b6474;
+      margin-bottom: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      margin-right: 10px;
+      color: white;
+      background: #2457d6;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 24px;
+    }
+
+    section h2 {
+      font-size: 34px;
+      margin-bottom: 16px;
+    }
+
+    .section-description {
+      color: #667085;
+      margin-bottom: 35px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      padding: 26px;
+      background: white;
+      border: 1px solid #e4e7ec;
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgba(29, 50, 90, 0.06);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #2457d6;
+    }
+
+    .card p {
+      color: #667085;
+    }
+
+    footer {
+      padding: 35px;
+      text-align: center;
+      color: #667085;
+      background: white;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    @media (max-width: 700px) {
+      nav div {
+        display: none;
+      }
+
+      header h1 {
+        font-size: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h2>Hower Zheng</h2>
+
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#activities">Activities</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <div>
+      <p>STUDENT · RESEARCHER · CREATOR</p>
+
+      <h1>Hello, I’m <span>Hower Zheng.</span></h1>
+
+      <p>
+        I am a high school student interested in physics, economics,
+        engineering, and interdisciplinary research. This website presents
+        selected projects, academic interests, and extracurricular experiences.
+      </p>
+
+      <a class="button" href="#projects">View My Projects</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+
+    <p class="section-description">
+      I enjoy using scientific reasoning, experimentation, and data analysis
+      to explore real-world questions. My interests include physics,
+      engineering design, economics, and technology.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Selected Projects</h2>
+
+    <p class="section-description">
+      A selection of my academic research and engineering work.
+    </p>
+
+    <div class="project-grid">
+      <article class="card">
+        <h3>Wind-Powered Car</h3>
+        <p>
+          An experimental engineering project investigating how sail angle
+          affects the speed and stability of a wind-powered vehicle.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Oil Price Pass-Through Research</h3>
+        <p>
+          An economics research project examining how geography, import
+          dependence, competition, and policy affect retail gasoline prices.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Public Health Video</h3>
+        <p>
+          A student-produced video project exploring healthier relationships
+          with smartphones and digital technology.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section id="activities">
+    <h2>Activities</h2>
+
+    <div class="project-grid">
+      <article class="card">
+        <h3>Academic Interests</h3>
+        <p>Physics, calculus, economics, engineering, and data analysis.</p>
+      </article>
+
+      <article class="card">
+        <h3>Creative Work</h3>
+        <p>Video editing, 3D modelling, web design, and science communication.</p>
+      </article>
+
+      <article class="card">
+        <h3>Sports</h3>
+        <p>Tennis, badminton, and table tennis.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+
+    <p class="section-description">
+      Contact information and a downloadable résumé will be added here.
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 Hower Zheng. All rights reserved.</p>
+  </footer>
+</body>
+</html>
