@@ -4,140 +4,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta name="description" content="Explore Hower Zheng’s projects and interests in physics, economics, engineering, and creative work.">
   <title>Hower Zheng | Personal Portfolio</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root { --ink: #203e36; --muted: #65756d; --paper: #f6f5ef; --line: #dce2d8; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 30px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.7; color: var(--ink); background: var(--paper); }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid #9a713b; outline-offset: 6px; }
+    nav { max-width: 1440px; margin: auto; padding: 25px 6%; display: flex; justify-content: space-between; align-items: center; gap: 20px; border-bottom: 1px solid var(--line); }
+    nav h2 { font-family: Georgia, serif; font-size: 24px; font-weight: 500; letter-spacing: -.7px; }
+    nav div { display: flex; gap: 28px; }
+    nav a { text-decoration: none; font-size: 13px; color: var(--muted); transition: color .2s; }
+    nav a:hover { color: var(--ink); }
+    header { max-width: 1440px; margin: auto; padding: 56px 6% 72px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 6%; }
+    .eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 25px; }
+    header h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(46px, 5.5vw, 78px); font-weight: 400; line-height: 1.1; letter-spacing: -2.8px; margin-bottom: 28px; }
+    header h1 span { display: block; font-style: italic; color: #537461; }
+    header .intro { max-width: 440px; font-size: 15px; color: var(--muted); margin-bottom: 32px; }
+    .button { display: inline-flex; align-items: center; gap: 30px; padding: 13px 22px; background: var(--ink); color: #fff; text-decoration: none; font-size: 12px; border-radius: 3px; transition: background .2s, transform .2s; }
+    .button:hover { background: #355849; transform: translateY(-2px); }
+    .hero-photo { position: relative; min-width: 0; background: #dce2d8; border-radius: 180px 180px 4px 4px; overflow: hidden; }
+    .hero-photo img { display: block; width: 100%; height: clamp(400px, 43vw, 570px); object-fit: cover; object-position: 52% center; }
+    .hero-photo::after { content: ""; position: absolute; inset: 55% 0 0; background: linear-gradient(transparent, rgba(15,34,32,.65)); pointer-events: none; }
+    .hero-photo figcaption { position: absolute; bottom: 24px; left: 25px; right: 25px; color: white; z-index: 1; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; }
+    main { max-width: 1200px; margin: auto; padding: 0 30px; }
+    section { padding: 72px 0; border-top: 1px solid var(--line); scroll-margin-top: 25px; }
+    .section-label { display: block; font-size: 10px; font-weight: 600; letter-spacing: 2px; color: var(--muted); margin-bottom: 16px; text-transform: uppercase; }
+    section h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: clamp(30px, 3.5vw, 44px); line-height: 1.2; letter-spacing: -1.1px; margin-bottom: 20px; }
+    .section-description { color: var(--muted); font-size: 15px; max-width: 620px; margin-bottom: 32px; }
+    .about-layout { display: grid; grid-template-columns: .85fr 1fr; gap: 10%; align-items: center; }
+    .about-photo { display: block; width: 100%; height: 300px; object-fit: cover; border-radius: 4px; background: #dce2d8; }
+    .about-layout .section-description { margin-bottom: 0; }
+    .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+    .card { padding: 28px; background: #fdfdf9; border: 1px solid var(--line); border-radius: 4px; transition: border-color .2s, transform .2s; }
+    .card:hover { border-color: #a4b6a7; transform: translateY(-3px); }
+    .card-number { display: block; color: #8a9b8c; font-family: Georgia, serif; font-style: italic; font-size: 30px; margin-bottom: 24px; }
+    .card h3 { font-family: Georgia, serif; font-size: 23px; font-weight: 400; line-height: 1.3; margin-bottom: 14px; }
+    .card p { color: var(--muted); font-size: 14px; }
+    #activities .card { background: transparent; border-width: 1px 0 0; border-radius: 0; padding: 24px 0; }
+    #honors .project-grid { grid-template-columns: minmax(0, 620px); }
+    #honors .card img { height: auto; }
+    #contact { padding-bottom: 80px; }
+    footer { padding: 28px 6%; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; color: var(--muted); font-size: 11px; }
+    footer a { text-underline-offset: 3px; }
+    @media (max-width: 800px) {
+      nav { padding: 20px 6%; flex-wrap: wrap; }
+      nav div { flex-wrap: wrap; gap: 18px; }
+      header { padding-top: 38px; gap: 30px; }
+      header h1 { font-size: 47px; }
+      .hero-photo img { height: 440px; }
+      .project-grid { grid-template-columns: 1fr; }
+      .about-layout { gap: 30px; }
+      .card-number { margin-bottom: 12px; }
     }
-
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #172033;
-      background: #f6f8fc;
+    @media (max-width: 600px) {
+      header { grid-template-columns: 1fr; padding-bottom: 45px; }
+      header .intro { max-width: none; }
+      .hero-photo { border-radius: 150px 150px 4px 4px; }
+      .hero-photo img { height: 380px; }
+      main { padding: 0 6%; }
+      section { padding: 46px 0; }
+      .about-layout { grid-template-columns: 1fr; }
+      .about-photo { height: 240px; }
+      footer { align-items: flex-start; }
     }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 8%;
-      background: white;
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    nav h2 {
-      color: #2457d6;
-    }
-
-    nav a {
-      margin-left: 24px;
-      color: #374151;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      color: #2457d6;
-    }
-
-    header {
-      min-height: 75vh;
-      display: flex;
-      align-items: center;
-      padding: 80px 10%;
-      background: linear-gradient(135deg, #eef4ff, #ffffff);
-    }
-
-    header h1 {
-      font-size: 56px;
-      margin-bottom: 16px;
-    }
-
-    header h1 span {
-      color: #2457d6;
-    }
-
-    header p {
-      max-width: 680px;
-      font-size: 20px;
-      color: #5b6474;
-      margin-bottom: 28px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 22px;
-      margin-right: 10px;
-      color: white;
-      background: #2457d6;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 80px 24px;
-    }
-
-    section h2 {
-      font-size: 34px;
-      margin-bottom: 16px;
-    }
-
-    .section-description {
-      color: #667085;
-      margin-bottom: 35px;
-    }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
-    }
-
-    .card {
-      padding: 26px;
-      background: white;
-      border: 1px solid #e4e7ec;
-      border-radius: 14px;
-      box-shadow: 0 8px 25px rgba(29, 50, 90, 0.06);
-    }
-
-    .card h3 {
-      margin-bottom: 12px;
-      color: #2457d6;
-    }
-
-    .card p {
-      color: #667085;
-    }
-
-    footer {
-      padding: 35px;
-      text-align: center;
-      color: #667085;
-      background: white;
-      border-top: 1px solid #e5e7eb;
-    }
-
-    @media (max-width: 700px) {
-      nav div {
-        display: none;
-      }
-
-      header h1 {
-        font-size: 40px;
-      }
-    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
   </style>
 </head>
 
 <body>
-  <nav>
+  <nav aria-label="Main navigation">
     <h2>Hower Zheng</h2>
 
     <div>
@@ -150,21 +89,31 @@
 
   <header>
     <div>
-      <p>STUDENT · RESEARCHER · CREATOR</p>
+      <p class="eyebrow">STUDENT · RESEARCHER · CREATOR</p>
 
       <h1>Hello, I’m <span>Hower Zheng.</span></h1>
 
-      <p>
+      <p class="intro">
         I am a high school student interested in physics, economics,
         engineering, and interdisciplinary research. This website presents
         selected projects, academic interests, and extracurricular experiences.
       </p>
 
-      <a class="button" href="#projects">View My Projects</a>
+      <a class="button" href="#projects">View My Projects <span aria-hidden="true">↗</span></a>
     </div>
+    <figure class="hero-photo">
+      <img src="assets/alpine-landscape.webp" width="1500" height="1000" alt="A sunlit alpine valley framed by forested slopes and distant snowy mountains" fetchpriority="high" decoding="async">
+      <figcaption>A wider perspective. A curious mind.</figcaption>
+    </figure>
   </header>
 
+  <main>
+
   <section id="about">
+    <div class="about-layout">
+      <img class="about-photo" src="assets/forest-light.webp" width="700" height="466" alt="Sunlight filtering through a quiet green forest" loading="lazy" decoding="async">
+      <div>
+    <span class="section-label">01 / A little about me</span>
     <h2>About Me</h2>
 
     <p class="section-description">
@@ -172,9 +121,12 @@
       to explore real-world questions. My interests include physics,
       engineering design, economics, and technology.
     </p>
+      </div>
+    </div>
   </section>
 
   <section id="projects">
+    <span class="section-label">02 / Ideas into practice</span>
     <h2>Selected Projects</h2>
 
     <p class="section-description">
@@ -183,6 +135,7 @@
 
     <div class="project-grid">
       <article class="card">
+        <span class="card-number" aria-hidden="true">01</span>
         <h3>Wind-Powered Car</h3>
         <p>
           An experimental engineering project investigating how sail angle
@@ -191,6 +144,7 @@
       </article>
 
       <article class="card">
+        <span class="card-number" aria-hidden="true">02</span>
         <h3>Oil Price Pass-Through Research</h3>
         <p>
           An economics research project examining how geography, import
@@ -199,6 +153,7 @@
       </article>
 
       <article class="card">
+        <span class="card-number" aria-hidden="true">03</span>
         <h3>Public Health Video</h3>
         <p>
           A student-produced video project exploring healthier relationships
@@ -209,6 +164,7 @@
   </section>
 
   <section id="activities">
+    <span class="section-label">03 / Beyond the classroom</span>
     <h2>Activities</h2>
 
     <div class="project-grid">
@@ -229,7 +185,8 @@
     </div>
   </section>
 <section id="honors">
-  <h2>Personal Achievements</h2>
+  <span class="section-label">04 / Milestones</span>
+    <h2>Personal Achievements</h2>
 
   <p class="section-description">
     Selected academic achievements and credentials.
@@ -240,6 +197,7 @@
       <img
         src="微信图片_20260729092529_592_14.png"
         alt="TOEFL score report"
+        loading="lazy" decoding="async"
         style="width: 100%; border-radius: 10px; margin-bottom: 18px;"
       >
 
@@ -253,6 +211,7 @@
   </div>
 </section>
   <section id="contact">
+    <span class="section-label">05 / Keep in touch</span>
     <h2>Contact</h2>
 
     <p class="section-description">
@@ -260,8 +219,12 @@
     </p>
   </section>
 
+  </main>
+
   <footer>
     <p>© 2026 Hower Zheng. All rights reserved.</p>
+    <p>Landscape photography via <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>.</p>
   </footer>
 </body>
 </html>
+
